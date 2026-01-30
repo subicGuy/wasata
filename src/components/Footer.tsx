@@ -57,9 +57,9 @@ export const Footer = () => {
 
             {/* Links */}
             <div className="flex gap-6 text-sm text-background/60">
-              <Link to="/privacy-policy" className="hover:text-background transition-colors">سياسة الخصوصية</Link>
-              <Link to="/terms-conditions" className="hover:text-background transition-colors">الشروط والأحكام</Link>
-              <Link to="/contact" className="hover:text-background transition-colors">اتصل بنا</Link>
+              <Link to="/privacy-policy" className="hover:text-background transition-colors" onClick={() => window.scrollTo(0, 0)}>سياسة الخصوصية</Link>
+              <Link to="/terms-conditions" className="hover:text-background transition-colors" onClick={() => window.scrollTo(0, 0)}>الشروط والأحكام</Link>
+              <Link to="/contact" className="hover:text-background transition-colors" onClick={() => window.scrollTo(0, 0)}>اتصل بنا</Link>
             </div>
 
             {/* Copyright */}
