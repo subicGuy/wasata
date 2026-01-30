@@ -56,9 +56,15 @@ export const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="gold" size="lg">
-              ابدأ الاستثمار
-            </Button>
+            <a
+              href="https://trade.wasatahcapital.com/user/register"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="gold" size="lg">
+                ابدأ الاستثمار
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}

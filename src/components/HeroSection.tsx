@@ -47,9 +47,15 @@ export const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              <Button variant="gold" size="xl" className="animate-pulse-gold">
-                ابدأ الاستثمار الآن
-              </Button>
+              <a
+                href="https://trade.wasatahcapital.com/user/register"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="gold" size="xl" className="animate-pulse-gold">
+                  ابدأ الاستثمار الآن
+                </Button>
+              </a>
               <Button variant="outline" size="xl" asChild>
                 <a href="/contact">تواصل معنا</a>
               </Button>

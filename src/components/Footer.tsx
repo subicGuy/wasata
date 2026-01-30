@@ -22,12 +22,24 @@ export const Footer = () => {
             حمّل تطبيق وساطة كابيتال الآن وابدأ في بناء مستقبلك المالي
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="gold" size="lg">
-              سجّل الآن
-            </Button>
-            <Button variant="outline" size="lg" className="border-background/30 text-background hover:bg-background/10 bg-transparent">
-              اطلب العروض
-            </Button>
+            <a
+                href="https://trade.wasatahcapital.com/user/register"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              <Button variant="gold" size="lg">
+                سجّل الآن
+              </Button>
+            </a>
+            <a
+              href="https://trade.wasatahcapital.com/user/register"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+                <Button variant="outline" size="lg" className="border-background/30 text-background hover:bg-background/10 bg-transparent">
+                  اطلب العروض
+                </Button>
+            </a>
           </div>
         </motion.div>
 
