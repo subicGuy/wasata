@@ -1,0 +1,227 @@
+/* Use self-hosted Tajawal via @fontsource for better iOS rendering */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wasatah Capital - Premium Gold & Light Design System */
+
+@layer base {
+  :root {
+    /* Gold palette */
+    --gold: 43 74% 49%;
+    --gold-light: 43 70% 60%;
+    --gold-dark: 43 80% 35%;
+    --gold-muted: 43 30% 75%;
+    
+    /* Cream/Light palette */
+    --cream: 40 40% 97%;
+    --cream-dark: 40 20% 93%;
+    
+    /* Core semantic tokens */
+    --background: 40 40% 98%;
+    --foreground: 40 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 40 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 40 20% 15%;
+
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 20% 93%;
+    --secondary-foreground: 40 20% 15%;
+
+    --muted: 40 20% 93%;
+    --muted-foreground: 40 10% 45%;
+
+    --accent: 43 70% 60%;
+    --accent-foreground: 40 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 80% 60%) 50%, hsl(43 74% 49%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(40 40% 98%) 0%, hsl(40 30% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(40 20% 97%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(43 74% 49% / 0.15);
+    --shadow-gold: 0 8px 32px -4px hsl(43 74% 49% / 0.25);
+    --shadow-card: 0 4px 24px -4px hsl(40 20% 15% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(40 20% 15% / 0.12);
+
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 20% 93%;
+    --sidebar-accent-foreground: 40 20% 15%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 43 74% 49%;
+  }
+
+  .dark {
+    --background: 40 20% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 40 15% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 40 15% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 43 74% 55%;
+    --primary-foreground: 40 20% 8%;
+
+    --secondary: 40 15% 18%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 40 15% 18%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 43 70% 45%;
+    --accent-foreground: 40 20% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 15% 20%;
+    --input: 40 15% 20%;
+    --ring: 43 74% 55%;
+
+    --sidebar-background: 40 15% 10%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 43 74% 55%;
+    --sidebar-primary-foreground: 40 20% 8%;
+    --sidebar-accent: 40 15% 15%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 40 15% 18%;
+    --sidebar-ring: 43 74% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-tajawal;
+    direction: rtl;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga" 1, "calt" 1;
+  }
+
+  /* Fix Arabic text rendering on iOS */
+  h1, h2, h3, h4, h5, h6, p, span, a, button, label {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  /*
+    iOS Safari can render Arabic dots/marks incorrectly when using background-clip:text.
+    Fallback to solid primary color on iOS to keep glyphs (e.g., ث) correct.
+  */
+  @supports (-webkit-touch-callout: none) {
+    .text-gradient-gold {
+      background-image: none;
+      color: hsl(var(--primary));
+      -webkit-text-fill-color: hsl(var(--primary));
+    }
+  }
+
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(43 74% 49% / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 20px hsl(43 74% 49% / 0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, hsl(43 74% 49% / 0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
