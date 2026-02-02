@@ -299,8 +299,10 @@ const Contact = () => {
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
               سجّل الآن وابدأ رحلتك الاستثمارية مع وساطة كابيتال
             </p>
-            <Button size="lg" className="bg-background text-foreground hover:bg-background/90">
-              سجّل الآن
+            <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
+              <a href="https://trade.wasatahcapital.com/user/register" target="_blank" rel="noopener noreferrer">
+                سجّل الآن
+              </a>
             </Button>
           </motion.div>
         </div>

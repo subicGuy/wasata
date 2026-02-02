@@ -143,7 +143,9 @@ const Trade = () => {
                 تداول بالسوق الأمريكي باعتمادية وسرعة تنفيذ عالية مع أدوات ذكية تساعدك تفهم السوق وأنت متطمن من شرعية الأسهم
               </p>
               <Button variant="gold" size="xl" className="mb-8">
-                تداول بذكاء
+                <a href="https://trade.wasatahcapital.com/user/register" target="_blank" rel="noopener noreferrer">
+                  تداول بذكاء
+                </a>
               </Button>
               
               {/* License Badge */}
@@ -315,7 +317,9 @@ const Trade = () => {
               size="xl" 
               className="bg-white text-primary hover:bg-white/90 shadow-elevated"
             >
-              سجّل الآن مجاناً
+              <a href="https://trade.wasatahcapital.com/user/register" target="_blank" rel="noopener noreferrer">
+                سجّل الآن مجاناً
+              </a>
             </Button>
           </motion.div>
         </div>

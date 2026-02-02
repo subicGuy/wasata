@@ -114,11 +114,15 @@ const Investment = () => {
                 اختر من بين مجموعة متنوعة من المحافظ الاستثمارية المصممة لتناسب أهدافك ومستوى المخاطرة المفضل لديك
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="gold" size="lg">
+                <Button variant="gold" size="lg" asChild>
+                  <a href="https://trade.wasatahcapital.com/user/register" target="_blank" rel="noopener noreferrer">
                   ابدأ الاستثمار الآن
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" asChild>
+                  <a href="https://trade.wasatahcapital.com/user/register" target="_blank" rel="noopener noreferrer">
                   تواصل مع مستشار
+                  </a>
                 </Button>
               </div>
             </motion.div>
@@ -255,8 +259,10 @@ const Investment = () => {
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
               سجّل الآن واحصل على استشارة مجانية لاختيار المحفظة المناسبة لك
             </p>
-            <Button size="lg" className="bg-background text-foreground hover:bg-background/90">
-              سجّل الآن
+            <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
+              <a href="https://trade.wasatahcapital.com/user/register" target="_blank" rel="noopener noreferrer">
+                سجّل الآن
+              </a>
             </Button>
           </motion.div>
         </div>
