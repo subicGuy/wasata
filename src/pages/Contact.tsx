@@ -10,12 +10,12 @@ import { Phone, Mail, MapPin, Clock, Send, MessageSquare, CheckCircle2 } from 'l
 import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
-  // {
-  //   icon: Phone,
-  //   title: 'الهاتف',
-  //   details: ['+966 11 XXX XXXX', '+966 50 XXX XXXX'],
-  //   description: 'اتصل بنا خلال ساعات العمل'
-  // },
+  {
+    icon: Phone,
+    title: 'الهاتف',
+    details: ['+966581205503'],
+    description: 'اتصل بنا خلال ساعات العمل'
+  },
   {
     icon: Mail,
     title: 'البريد الإلكتروني',
@@ -106,7 +106,7 @@ const Contact = () => {
       {/* Contact Info Cards */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.title}
