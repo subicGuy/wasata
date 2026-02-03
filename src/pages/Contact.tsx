@@ -121,7 +121,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-2">{info.title}</h3>
                 {info.details.map((detail, i) => (
-                  <p key={i} className="text-muted-foreground">{detail}</p>
+                  <p key={i} className="text-muted-foreground" dir="ltr">{detail}</p>
                 ))}
                 <p className="text-sm text-muted-foreground/70 mt-2">{info.description}</p>
               </motion.div>
