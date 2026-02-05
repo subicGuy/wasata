@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'الهاتف',
-    details: ['+966581205503'],
+    details: ['+966599150639'],
     description: 'اتصل بنا خلال ساعات العمل'
   },
   {
